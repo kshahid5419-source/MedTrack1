@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+
+  --color-paper: #f3efe6;
+  --color-card: #fffdf8;
+  --color-ink: #1c2420;
+  --color-muted: #5c655c;
+  --color-line: #e3d8c8;
+  --color-brass: #9a4518;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .tap {
+    transition: scale 150ms ease-out;
+  }
+
+  .tap:active:not(:disabled) {
+    scale: 0.96;
+  }
+}
+
+.ring-stage {
+  container-type: size;
+}
+
+.ring-bead {
+  transition: transform 520ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes cadence-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-brass) 42%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
+
+.cadence-pulse {
+  animation: cadence-pulse 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cadence-pulse,
+  .ring-bead {
+    animation: none;
+    transition: none;
+  }
+
+  .tap:active {
+    scale: 1;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
