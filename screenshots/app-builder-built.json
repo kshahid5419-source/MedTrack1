@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CADENCE",
+      "hasCanvas": false,
+      "bodyTextLen": 1030,
+      "bodyTextHash": "9e592a5f7f89ecdd98703dd2ced4ed255365794b1354426a50dcbef6b6284a18",
+      "bodyTextPrefix": "CADENCE The day, composed. Field notes Orbit Plan Sky Passage Th",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CADENCE",
+      "hasCanvas": false,
+      "bodyTextLen": 955,
+      "bodyTextHash": "9d37d94ebb3761c4d42a4c339a0f40db791dd84f9f3ccc0ea7ff0b81a1fda750",
+      "bodyTextPrefix": "CADENCE Circadian care composer Notes Care slip This is not a ch",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
